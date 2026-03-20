@@ -1,104 +1,173 @@
-## 11. Installation et exécution du projet
+"# Projet Green & Fast 2026 — Optimisation des livraisons
 
-### 1. Cloner le repository
+## 1. Introduction du projet
 
-git clone https://github.com/TON-USERNAME/green-fast-project.git
-cd green-fast-project
+Ce projet s’inscrit dans le cadre du module Data & Intelligence Artificielle.
 
----
+Il vise à répondre à une problématique réelle d’optimisation logistique pour l’entreprise Eco-Delivery, spécialisée dans la livraison de repas à faible impact environnemental.
 
-### 2. Créer un environnement virtuel
+Promesse :
+"Livré en 30 minutes, ou c’est offert, avec 0g de CO2 émis"
 
-#### Sur Windows
+Problèmes identifiés :
+- Livreurs se déplaçant à vide
+- Mauvaise répartition géographique
+- Retards de livraison
+- Empreinte carbone trop élevée
 
-python -m venv venv
-venv\Scripts\activate
-
-#### Sur Mac / Linux
-
-python3 -m venv venv
-source venv/bin/activate
+Objectif : proposer une solution data permettant d’optimiser les livraisons.
 
 ---
 
-### 3. Installer les dépendances
+## 2. Objectifs
 
-Si un fichier requirements.txt est fourni :
+### Objectifs métier
 
-pip install -r requirements.txt
+- Prédire les zones de forte demande
+- Optimiser le positionnement des livreurs
+- Réduire le temps de livraison
+- Diminuer les trajets inutiles
+- Améliorer la rentabilité
 
-Sinon, installer manuellement :
+### Objectifs techniques
 
-pip install pandas numpy scikit-learn matplotlib seaborn jupyter
+- Construire un pipeline de données
+- Nettoyer et transformer les données
+- Développer un modèle baseline
+- Évaluer les performances
+- Produire un MVP
 
 ---
 
-### 4. Télécharger le dataset
+## 3. Données
 
-Télécharger le dataset depuis Kaggle :
+Dataset :
 https://www.kaggle.com/datasets/gauravmalik26/food-delivery-dataset
 
-Placer le fichier train.csv dans le dossier :
+Contenu :
+- Données de commandes
+- Informations livreurs
+- Temps de livraison
 
+---
+
+## 4. Méthodologie
+
+1. Compréhension du problème
+2. Analyse exploratoire (EDA)
+3. Nettoyage des données
+4. Feature engineering
+5. Modélisation
+6. Évaluation
+7. Itérations
+
+---
+
+## 5. Pipeline de données
+
+- Nettoyage
+- Transformation
+- Encodage
+- Split train/test
+- Pipeline reproductible
+
+---
+
+## 6. Modélisation
+
+- Régression linéaire
+- Random Forest
+
+---
+
+## 7. Évaluation
+
+- MAE
+- RMSE
+
+---
+
+## 8. Organisation Agile
+
+### Kanban
+- À faire
+- En cours
+- Terminé
+
+### Backlog
+- Nettoyage données
+- Modélisation
+- Évaluation
+
+### Definition of Done
+- Code fonctionnel
+- Code relu
+- Résultat validé
+- Versionné
+
+---
+
+## 9. Outils
+
+- Python
+- Pandas
+- Scikit-learn
+- Matplotlib / Seaborn
+- Git
+
+---
+
+## 10. Installation et exécution
+
+Prérequis :
+Python 3.9+, pip, Git
+
+Vérification :
+python --version
+pip --version
+git --version
+
+Cloner :
+git clone https://github.com/daviddelgadop/green-fast-project.git
+cd green-fast-project
+
+Créer environnement :
+python -m venv venv
+venv\\Scripts\\activate
+
+Installer dépendances :
+pip install -r requirements.txt
+
+Dataset :
 data/train.csv
 
-Structure attendue du projet :
-
-green-fast-project/
-│
-├── data/
-│   └── train.csv
-│
-├── notebooks/
-│   └── green_fast_mvp.ipynb
-│
-├── src/
-│   └── pipeline.py (si utilisé)
-│
-├── requirements.txt
-└── README.md
-
----
-
-### 5. Lancer le projet
-
-#### Option 1 — Notebook (recommandé)
-
+Lancer :
 jupyter notebook
 
-Puis ouvrir :
+---
 
-notebooks/green_fast_mvp.ipynb
+## 11. Vérification
 
-Exécuter les cellules dans l’ordre.
+- Dataset chargé
+- Pipeline exécuté
+- Modèle entraîné
+- Métrique affichée
 
 ---
 
-#### Option 2 — Script Python (si présent)
+## 12. Problèmes fréquents
 
-python src/pipeline.py
-
----
-
-### 6. Vérification du bon fonctionnement
-
-Le projet fonctionne correctement si :
-
-- Les données sont chargées sans erreur
-- Le pipeline s’exécute jusqu’au bout
-- Un modèle est entraîné
-- Une métrique (MAE ou RMSE) est affichée
+- Module manquant → pip install
+- Mauvais chemin → vérifier data/train.csv
 
 ---
 
-### 7. Problèmes fréquents
+## 13. Version Python
 
-- Erreur "ModuleNotFoundError" → vérifier installation avec pip
-- Erreur de chemin fichier → vérifier data/train.csv
-- Problème Kaggle → vérifier que le fichier est bien téléchargé
+Python 3.9+
 
 ---
 
-### 8. Version Python recommandée
+## 14. Conclusion
 
-Python 3.9 ou supérieur
+Projet MVP combinant data engineering, machine learning et méthodologie Agile.
