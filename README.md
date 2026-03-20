@@ -161,13 +161,3 @@ jupyter notebook
 - Mauvais chemin → vérifier data/train.csv
 
 ---
-
-## 13. Version Python
-
-Python 3.9+
-
----
-
-## 14. Conclusion
-
-Projet MVP combinant data engineering, machine learning et méthodologie Agile.
